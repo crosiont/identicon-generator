@@ -9,6 +9,7 @@ user_data = list(hashed_input.digest()) #turning the hashed input into a list of
 #print(user_data)
 
 def coord_update(x_start, y_start, x_end, y_end, img):
+    file_name = user_data[3] * user_data[4]
     x_start += 60
     x_end += 60
     if x_start == 360:
@@ -17,8 +18,8 @@ def coord_update(x_start, y_start, x_end, y_end, img):
         x_start = 0
         x_end = 60
         if y_start == 360:
-            img.save("output.png")
-            sys.exit("finished generating identicon! saved in output.png. exiting now...")
+            img.save(f"{file_name}_output.png")
+            sys.exit(f"finished generating identicon! saved in {file_name}_output.png. exiting now...")
     return x_start, y_start, x_end, y_end
 
 def draw_thing():
