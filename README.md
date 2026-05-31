@@ -1,5 +1,5 @@
 #Description:
-A 5x5 identicon generator that takes a string as input and outputs an identicon as a png.
+A 5x5 identicon generator that takes a string as input, hashes it with MD5 and outputs an identicon as a png using pillow.
 
 #Requirements:
 Pillow
